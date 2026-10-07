@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-surface-muted text-slate-800;
+  }
+
+  /* Visible keyboard focus everywhere, for accessibility. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-500 ring-offset-2;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border border-surface-border bg-white shadow-card;
+  }
+
+  .card-header {
+    @apply flex items-center justify-between border-b border-surface-border px-5 py-4;
+  }
+
+  .card-title {
+    @apply text-sm font-semibold text-slate-900;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-3.5 py-2
+           text-sm font-medium transition-colors disabled:cursor-not-allowed
+           disabled:opacity-60;
+  }
+
+  .btn-primary {
+    @apply btn bg-brand-600 text-white hover:bg-brand-700;
+  }
+
+  .btn-secondary {
+    @apply btn border border-surface-border bg-white text-slate-700 hover:bg-slate-50;
+  }
+
+  .btn-danger {
+    @apply btn bg-red-600 text-white hover:bg-red-700;
+  }
+
+  .btn-ghost {
+    @apply btn text-slate-600 hover:bg-slate-100;
+  }
+
+  .input {
+    @apply w-full rounded-lg border border-surface-border bg-white px-3 py-2 text-sm
+           text-slate-900 placeholder:text-slate-400 focus:border-brand-500
+           focus:outline-none focus:ring-1 focus:ring-brand-500;
+  }
+
+  .label {
+    @apply mb-1.5 block text-sm font-medium text-slate-700;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium;
+  }
+
+  .table-wrap {
+    @apply overflow-x-auto;
+  }
+
+  .table {
+    @apply w-full border-collapse text-sm;
+  }
+
+  .table thead th {
+    @apply whitespace-nowrap border-b border-surface-border bg-slate-50 px-4 py-3
+           text-left text-xs font-semibold uppercase tracking-wide text-slate-500;
+  }
+
+  .table tbody td {
+    @apply border-b border-surface-border px-4 py-3 text-slate-700;
+  }
+
+  .table tbody tr:hover {
+    @apply bg-slate-50/70;
+  }
+}

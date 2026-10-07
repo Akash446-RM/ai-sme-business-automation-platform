@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# ML artifacts (regenerate with scripts/train_models.py)
+backend/ml_models/*
+!backend/ml_models/.gitkeep
+
+# Node / frontend
+node_modules/
+dist/
+build/
+.vite/
+
+# Databases & data dumps
+*.db
+*.sqlite
+*.sqlite3
+*.csv
+*.pkl
+*.joblib
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
